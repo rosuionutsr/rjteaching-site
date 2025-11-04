@@ -1,56 +1,74 @@
+:root {
+  --primary: #004aad;
+  --secondary: #007bff;
+  --text: #1a1a1a;
+  --bg: #f7f9fc;
+  --white: #ffffff;
+}
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #222;
-  background-color: #fafafa;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: var(--text);
+  background-color: var(--bg);
+  scroll-behavior: smooth;
 }
 
+/* HEADER */
 header {
-  background: #004aad;
-  color: #fff;
-  padding: 1.2rem 1rem;
+  background: var(--primary);
+  color: var(--white);
   text-align: center;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
-
-header h1 {
-  margin: 0;
-  font-size: 1.8rem;
-}
-
-nav {
-  margin-top: 0.5rem;
-}
-
+header h1 { margin: 0; font-size: 2rem; letter-spacing: 0.5px; }
+nav { margin-top: 0.5rem; }
 nav a {
-  color: #fff;
-  margin: 0 0.8rem;
+  color: var(--white);
+  margin: 0 1rem;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
 }
+nav a:hover { opacity: 0.8; }
 
-nav a:hover {
-  text-decoration: underline;
-}
-
-section {
-  padding: 1.5rem 2rem;
-  max-width: 900px;
-  margin: auto;
-}
-
-section h2 {
-  color: #004aad;
-}
-
-ul {
-  list-style-type: square;
-}
-
-footer {
-  background: #222;
-  color: #fff;
+/* HERO */
+#hero {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+              url('profile.jpg') center/cover no-repeat;
+  color: var(--white);
   text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
+  padding: 5rem 1rem;
 }
+.hero-content {
+  background: rgba(0,0,0,0.5);
+  display: inline-block;
+  padding: 2rem 3rem;
+  border-radius: 10px;
+}
+.hero-content h2 { margin-top: 0; font-size: 2rem; }
+.hero-content p { font-size: 1.2rem; }
+.btn-primary {
+  background: var(--secondary);
+  color: var(--white);
+  padding: 0.8rem 1.6rem;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 8px;
+  display: inline-block;
+  margin-top: 1rem;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  transition: background 0.2s ease;
+}
+.btn-primary:hover { background: #005ed9; }
+
+/* SECTIONS */
+section {
+  padding: 2.5rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+  background: var(--white);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border-radius: 10px;
+  margin-bottom: 2r
